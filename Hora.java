@@ -1,58 +1,55 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Hora{
-    public static void main(String[] args){
 
-        // Variáveis e o Scanner
-        private int hora, min, seg;
-        Scanner ler = new Scanner(System.in);
+    // Variáveis e o Scanner
+    private int hora, min, seg;
+    Scanner ler = new Scanner(System.in);
 
-        // Métodos construtores
-        public Hora() {
-            // Entrada da hora com tratamento de exceção
-            do {
-                try {
-                    System.out.print("Digite a hora: ");
-                    hora = ler.nextInt();
-                } catch (InputMismatchException e) {
-                    System.out.println("Entrada inválida! Digite um número inteiro.");
-                    ler.next(); // Limpa o buffer de entrada
-                    continue;
-                }
-            } while (hora < 0 || hora >= 24);
-
-            // Entrada do minuto com tratamento de exceção
-            do {
-                try {
-                    System.out.print("Digite o minuto: ");
-                    min = ler.nextInt();
-                } catch (InputMismatchException e) {
-                    System.out.println("Entrada inválida! Digite um número inteiro.");
-                    ler.next(); // Limpa o buffer de entrada
-                    continue;
-                }
-            } while (min < 0 || min > 60);
-
-            // Entrada do segundo com tratamento de exceção
-            do {
-                try {
-                    System.out.print("Digite a hora: ");
-                    seg = ler.nextInt();
-                } catch (InputMismatchException e) {
-                    System.out.println("Entrada inválida! Digite um número inteiro.");
-                    ler.next(); // Limpa o buffer de entrada
-                    continue;
-                }
-            } while (seg < 0 || seg > 60);
-        }
-
-        public void Hora(int h, int m, int s){
-            hora = h;
-            min = m;
-            seg = s;
-        }
-
+    // Métodos construtores
+    public Hora() {
+        // Entrada da hora com tratamento de exceção
+        do {
+            try {
+                System.out.print("Digite a hora: ");
+                hora = ler.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("Entrada inválida! Digite um número inteiro.");
+                ler.next(); // Limpa o buffer de entrada
+                continue;
+            }
+        } while (hora < 0 || hora >= 24);
+        // Entrada do minuto com tratamento de exceção
+        do {
+            try {
+                System.out.print("Digite o minuto: ");
+                min = ler.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("Entrada inválida! Digite um número inteiro.");
+                ler.next(); // Limpa o buffer de entrada
+                continue;
+            }
+        } while (min < 0 || min > 60);
+        // Entrada do segundo com tratamento de exceção
+        do {
+            try {
+                System.out.print("Digite a hora: ");
+                seg = ler.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("Entrada inválida! Digite um número inteiro.");
+                ler.next(); // Limpa o buffer de entrada
+                continue;
+            }
+        } while (seg < 0 || seg > 60);
     }
+
+    public Hora(int h, int m, int s){
+        hora = h;
+        min = m;
+        seg = s;
+    }
+
     // Getter's e Setter's
     void setHor(int h){
         hora = h;
@@ -76,7 +73,7 @@ public class Hora{
                 ler.next(); // Limpa o buffer de entrada
                 continue;
             }
-        } while(hora < 0 || hora >= 24)
+        } while(hora < 0 || hora >= 24);
     }
         
     void setMin(){
@@ -127,10 +124,9 @@ public class Hora{
     // O método getHora2() deve nos devolver a hora no formato: hh:mm:ss (AM/PM);
     String getHora2(){
         if(hora > 12){
-            hora = hora - 12;
-            return hora + ":" + min + ":" + seg + " PM";
+            return (hora-12) + ":" + min + ":" + seg + " PM";
         }else{
-            return hora + ":" + min + ":" + seg + " AM";
+            return (hora-12) + ":" + min + ":" + seg + " AM";
         }
     }
 

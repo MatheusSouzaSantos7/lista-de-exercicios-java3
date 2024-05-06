@@ -12,12 +12,12 @@ public class TesteHora{
         hora2.setMin();
         hora2.setSeg();
 
-        hora2.getHor();
-        hora2.getMin();
-        hora2.getSeg();
+        System.out.println(hora2.getHor());
+        System.out.println(hora2.getMin());
+        System.out.println(hora2.getSeg());
 
-        hora2.getHora1();
-        hora2.getHora2();
-        hora2.getSegundos();
+        System.out.println(hora2.getHora1());
+        System.out.println(hora2.getHora2());
+        System.out.println(hora2.getSegundos());
     }
 } 
