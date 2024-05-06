@@ -34,7 +34,7 @@ public class Hora{
         // Entrada do segundo com tratamento de exceção
         do {
             try {
-                System.out.print("Digite a hora: ");
+                System.out.print("Digite o segundo: ");
                 seg = ler.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("Entrada inválida! Digite um número inteiro.");
@@ -94,7 +94,7 @@ public class Hora{
         // Entrada do segundo com tratamento de exceção
         do {
             try {
-                System.out.print("Digite a hora: ");
+                System.out.print("Digite o segundo: ");
                 seg = ler.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("Entrada inválida! Digite um número inteiro.");
