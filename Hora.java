@@ -17,9 +17,11 @@ public class Hora{
             } catch (InputMismatchException e) {
                 System.out.println("Entrada inválida! Digite um número inteiro.");
                 ler.next(); // Limpa o buffer de entrada
+                hora = -1;
                 continue;
             }
         } while (hora < 0 || hora >= 24);
+
         // Entrada do minuto com tratamento de exceção
         do {
             try {
@@ -28,9 +30,11 @@ public class Hora{
             } catch (InputMismatchException e) {
                 System.out.println("Entrada inválida! Digite um número inteiro.");
                 ler.next(); // Limpa o buffer de entrada
+                min = -1;
                 continue;
             }
         } while (min < 0 || min > 60);
+
         // Entrada do segundo com tratamento de exceção
         do {
             try {
@@ -39,6 +43,7 @@ public class Hora{
             } catch (InputMismatchException e) {
                 System.out.println("Entrada inválida! Digite um número inteiro.");
                 ler.next(); // Limpa o buffer de entrada
+                seg = -1;
                 continue;
             }
         } while (seg < 0 || seg > 60);
@@ -71,6 +76,7 @@ public class Hora{
             } catch (InputMismatchException e) {
                 System.out.println("Entrada inválida! Digite um número inteiro.");
                 ler.next(); // Limpa o buffer de entrada
+                hora = -1;
                 continue;
             }
         } while(hora < 0 || hora >= 24);
@@ -85,6 +91,7 @@ public class Hora{
             } catch (InputMismatchException e) {
                 System.out.println("Entrada inválida! Digite um número inteiro.");
                 ler.next(); // Limpa o buffer de entrada
+                min = -1;
                 continue;
             }
         } while (min < 0 || min > 60);
@@ -99,6 +106,7 @@ public class Hora{
             } catch (InputMismatchException e) {
                 System.out.println("Entrada inválida! Digite um número inteiro.");
                 ler.next(); // Limpa o buffer de entrada
+                seg = -1;
                 continue;
             }
         } while (seg < 0 || seg > 60);
